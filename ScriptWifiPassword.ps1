@@ -7,8 +7,8 @@ foreach ($profile in $profiles) {
         
         Write-Output "Procesando perfil: $profileName"
         
-        $profileDetails = Invoke-Expression "netsh wlan show profile name=`"$profileName`" key=clear"
-        
+        $profileDetails = Invoke-Expression "netsh wlan show profile name=\"$profileName\" key=clear" 
+
         Write-Output $profileDetails
         
     }
